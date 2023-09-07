@@ -1,0 +1,27 @@
+<MyLayout>
+    # Ceci permet de changer de couleur de font de l'application
+    #canvas.before:
+    #    Color:
+    #        rgba: (240/255, 240/255, 240/255, 1)
+    #    Rectangle:
+    #        pos:self.pos
+    #        size: self.size
+    canvas.before:
+        Color:
+            rgba: (240/255, 240/255, 240/255, 1)
+        Rectangle:
+            pos:self.pos
+            size: self.size
+    BoxLayout:
+        #orientation: "horizontal" # alignement horizontal des bouton
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        spacing: 20 # Mettre de l'espace entre les boutons
+        padding: 50 # Espace sur le bord
+
+        
+        Button:
+            text:"Salut le monde"
+        Button:
+            text:"Au revoir"

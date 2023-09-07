@@ -1,0 +1,36 @@
+# les elements ci apres seront herite par dans MyLayout
+<Button>
+    font_size:32
+    background_normal: ''
+    background_color: (0,0,1,1)
+
+<TextInput>
+    background_normal: ''
+    background_color: (150/255,150/255,150/255,1)
+
+<Label>
+    font_size: 32
+
+<MyLayout>
+    BoxLayout:
+        #orientation: "horizontal" # alignement horizontal des bouton
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        spacing: 10 # Mettre de l'espace entre les boutons
+        padding: 10 # Espace sur le bord
+
+        Label:
+            text: "Nom"
+        TextInput:
+            multiline: False
+        Label:
+            text: "Plat prefere"
+        TextInput:
+            multiline: False
+        Button:
+            text:"Soumettre"
+        Button:
+            text:"Nettoyer"
+            background_color: (1,0,0,1)
+        

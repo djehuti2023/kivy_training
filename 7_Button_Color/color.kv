@@ -1,0 +1,48 @@
+# Ce import nous permet d'utiliser les couleur HEX
+#:import utils kivy.utils
+
+<MyGridLayout>
+    # Ce sont des identifiants qui permettrons 
+    # d'identifier les zones de saisie afin de permettre 
+    # leur utilisation dans le code python
+    name:name
+    food:food
+    color:color
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:"Nom"
+            
+            TextInput:
+                id: name
+                multiline:False
+            
+            Label:
+                text:"Plat prefere"
+                background_color: utils.get_color_from_hex('#eefa00') # Jaune
+                
+            TextInput:
+                id: food
+                multiline:False
+            
+            Label:
+                text:"Couleur prefere"
+            
+            TextInput:
+                id: color
+                multiline:False
+        Button:
+            text: "Soumettre"
+            font_size: 32
+            on_press: root.press()
+            # Kivy utilise une sorte de RGB mais un peu different
+            background_normal: '' # Elimine le filtre gris de Kivy
+            #background_color: (0,0,1,1) # bleu
+            #background_color: (238/255.0,250/255.0,0,1) # Jaune
+            background_color: utils.get_color_from_hex('#fa00df') # Rose

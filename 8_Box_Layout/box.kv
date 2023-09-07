@@ -1,0 +1,22 @@
+<MyLayout>
+    BoxLayout:
+        #orientation: "horizontal" # alignement horizontal des bouton
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        spacing: 20 # Mettre de l'espace entre les boutons
+        padding: 50 # Espace sur le bord
+
+        Button:
+            text:"Salut le monde"
+        Button:
+            text:"Au revoir"
+        Button:
+            text:"Je veux manger"
+            # definissons le positionement au centre
+            pos_hint: {'center_x': 0.5}
+            #size_hint: (0.5, 0.5) # les dimensions dynamiques
+            size_hint: (None, None)
+            # les dimensions non dynamique
+            width: 200
+            height: 50

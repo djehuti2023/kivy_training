@@ -1,0 +1,32 @@
+<Button>
+    font_size: 32
+    size_hint: (0.3, 0.3)
+<MyLayout>
+
+    FloatLayout:
+        #orientation: "horizontal" # alignement horizontal des bouton
+        size: root.width, root.height
+        
+        #spacing: 20 # Mettre de l'espace entre les boutons
+        #padding: 50 # Espace sur le bord
+
+        Button:
+            text:"En Haut a gauche"
+            # {"x", "y", "top", "bottom", "left", "right"}
+            pos_hint: {"x":0, "top":1}
+        
+        Button:
+            text:"En Haut a droite"
+            pos_hint: {"x":0.7, "top":1} # 0.7 pour x a caure de size_hint de <Button> 
+        
+        Button:
+            text:"Au Centre"
+            pos_hint: {"x":0.35, "y":0.35}
+        
+        Button:
+            text:"En Bas a gauche"
+            pos_hint: {"x":0}
+        
+        Button:
+            text:"En Bas a droite"
+            pos_hint: {"x":0.7, "bottom":1}
