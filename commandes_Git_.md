@@ -6,7 +6,7 @@ Commandes GIT de base
 
     L’une des commandes git les plus utilisées est git config. On l’utilise pour configurer les préférences de l’utilisateur : son mail, l’algorithme utilisé pour diff, le nom d’utilisateur et le format de fichier etc. Par exemple, la commande suivante peut être utilisée pour définir le mail d’un utilisateur:
 
-   $ git config --global user.email sam@google.com
+   $ git config --global user.email email@google.com
 
 ## Git init
 
@@ -24,7 +24,7 @@ Commandes GIT de base
 
     La commande git clone est utilisée pour la vérification des dépôts. Si le dépôt se trouve sur un serveur distant, utilisez:
 
-   $ git clone alex@93.188.160.58:/chemin/vers/dépôt
+   $ git clone github/chemin/vers/dépôt
 
     Inversement, si une copie de travail d’un dépôt local doit être créée, utilisez:
 
@@ -115,7 +115,7 @@ Commandes GIT de base
     L’ exécution de cette commande génère le log d’une branche. Un exemple de sortie :
 
     commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw 
-    Author: Alex Hunter <alexh@gmail.com> 
+     
     Date: Mon Oct 1 12:56:29 2016 -0600
 
 ## Git reset
@@ -164,7 +164,7 @@ Commandes GIT de base
 
     Git grep permet à un utilisateur de rechercher dans les arbres de contenu des expressions et / ou des mots. Par exemple, pour rechercher www.hostinger.com dans tous les fichiers, utilisez:
 
-   $  git grep "www.hostinger.com"
+   $  git grep "www.unsiteweb.com"
 
 ## Gitk
 
@@ -214,7 +214,7 @@ Commandes GIT de base
    $ git init
    $ git add .
    $ git commit -m "Add existing project files to Git"
-   $ git remote add origin https://github.com/cameronmcnz/example-website.git
+   $ git remote add origin https://github.com/unrepository/example-website.git
    $ git push -u -f origin master
    
    Pour le mot de passe apres le username, il faut saisir le token genere dans le compte
